@@ -1,0 +1,16 @@
+name: 'Bundle comparison'
+description: 'Compare the bundle size between the base branch and the current branch'
+inputs:
+  current-path:
+    description: 'The path to the current yml file'
+    required: true
+  base-path:
+    description: 'The path to the base yml file'
+    required: true
+  github-token:
+    description: 'The Github token'
+    required: true
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
